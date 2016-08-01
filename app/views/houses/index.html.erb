@@ -1,0 +1,9 @@
+<% @houses.each do |house| %>
+<div class="house">
+  <h2><a href="<%= house_path(house) %>"><%= house.name %></a></h2>
+  <img src="<%= house.sigil_url%>" alt="house.name" />
+  <p>
+    "<%= house.words %>"
+  </p>
+</div>
+<% end %>
