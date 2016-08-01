@@ -1,7 +1,9 @@
 <h2><%= @house.name %></h2>
+<%= image_tag @house.sigil_url %>
 <% @house.characters.each do |char| %>
 <div class="char">
   <h2><%= char.name %></h2>
   <%= image_tag char.photo_url %>
 </div>
 <% end %>
+<h3><a href="<%= edit_house_path(@house) %>">Edit house</a></h3>
