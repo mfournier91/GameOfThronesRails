@@ -1,15 +1,51 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+html {
+
+  background: url("http://www.thewrap.com/wp-content/uploads/2016/06/iron-throne.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+@font-face {
+  font-family: 'GameOfThrones';
+  /*src:url("/assets/fonts/Game_of_Thrones.ttf") format('truetype');*/
+  /*src: local('GOT'), asset_url("app/assets/fonts/Game_of_Thrones.ttf") */
+}
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: GameOfThrones, "Arial", sans-serif;
+  color: #8e110b;
+  text-shadow: .2px .2px #222;
+}
+a {
+  text-decoration: none;
+  color: #ccc;
+  text-shadow: 2px 2px #444;
+}
+
+.character, .house {
+  width: 25%;
+}
+img {
+  width: 10em;
+}
