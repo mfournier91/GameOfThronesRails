@@ -1,0 +1,5 @@
+<ul>
+<% @characters.each do |character| %>
+<li><a href="<%= house_character_path(character.house.id, character.id) %>"><%= character.name%></a> | <a href="<%= house_path(character.house) %>"><%= character.house.name %></a></li>
+<% end %>
+</ul>

@@ -36,6 +36,9 @@ class CharactersController < ApplicationController
     redirect_to characters_path
   end
 
+  def all_characters
+    @characters = Character.all
+  end
 
 private
 def character_params
