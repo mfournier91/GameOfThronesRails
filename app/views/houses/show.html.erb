@@ -1,4 +1,4 @@
-<h2><%= @house.name %></h2>
+<h2><a href="<%= house_characters_path(@house.id) %>">View <%= @house.name %> characters</a></h2>
 <%= image_tag @house.sigil_url %>
 <% @house.characters.each do |char| %>
 <div class="char">

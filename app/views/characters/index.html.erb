@@ -1,6 +1,7 @@
+<h2><%= @house.name %></h2>
 <ul>
 <% @characters.each do |character| %>
-<li><a href="<%= character_path(character) %>"><%= character.name%></a> | <a href="<%= house_path(character.house) %>"><%= character.house.name %></a></li>
+<li><a href="<%= house_character_path(character.house, character) %>"><%= character.name%></a> | <a href="<%= house_path(character.house) %>"><%= character.house.name %></a></li>
 <% end %>
 </ul>
-<p><%= link_to 'Create Character', new_character_path %></p>
+<p><%= link_to 'Create Character', new_house_character_path %></p>
