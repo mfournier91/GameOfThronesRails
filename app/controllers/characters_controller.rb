@@ -8,7 +8,8 @@ class CharactersController < ApplicationController
   end
 
   def new
-    @character = Character.new
+    @house = House.find(params[:house_id])
+    @character = @house.characters.build
   end
 
   def edit
@@ -16,10 +17,10 @@ class CharactersController < ApplicationController
   end
 
   def create
-    @character = Character.new character_params
-    if @character.save
-      redirect_to @character
-    end
+    @house = House.find(params[:house_id])
+    @character = @house.characters.create!(character_params)
+
+    redirect_to house_path(@house)
   end
 
   def update
