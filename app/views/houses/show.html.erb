@@ -2,7 +2,7 @@
 <%= image_tag @house.sigil_url %>
 <% @house.characters.each do |char| %>
 <div class="char">
-  <h2><%= char.name %></h2>
+  <h2><%= link_to char.name, house_character_path(@house.id, char.id) %></h2>
   <%= image_tag char.photo_url %>
 </div>
 <% end %>
