@@ -1,0 +1,14 @@
+<h2>Edit character</h2>
+<%= form_for @character do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :photo_url %>
+<%= f.text_field :photo_url %>
+
+<%= f.label :house %>
+<%= f.select :house_id, House.all.collect { |p| [ p.name, p.id ] }, include_blank: "Select A House" %>
+
+<%= f.submit %>
+<% end %>
