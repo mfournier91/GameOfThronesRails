@@ -9,7 +9,8 @@
   </head>
 
   <body>
-    <h1><a href="<%= houses_path %>">Game Of Thrones</a></h1>
+    <h1><a href="<%= houses_path %>" style="display:inline-block;">Game Of Thrones</a></h1>
+    <h2><a href="<%= characters_path %>" style="display:inline-block; float:right;">Character list</a></h2>
     <%= yield %>
   </body>
 </html>
